@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arena Tech | Peças e Serviços para Bobcat e Multimarcas</title>
+  <meta name="description" content="Arena Tech — especialistas em peças, manutenção e suporte técnico para mini carregadeiras e mini escavadeiras Bobcat e multimarcas em Lauro de Freitas, BA.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Arena Tech Peças e Serviços Ltda">
+  <meta name="language" content="pt-BR">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arena Tech | Peças e Serviços para Bobcat e Multimarcas">
+  <meta property="og:description" content="Especialistas em peças, manutenção e suporte técnico para mini carregadeiras e mini escavadeiras Bobcat e multimarcas em Lauro de Freitas, BA.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.arenatechs.com.br">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Arena Tech Peças e Serviços">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arena Tech | Peças e Serviços para Bobcat e Multimarcas">
+  <meta name="twitter:description" content="Especialistas em peças, manutenção e suporte técnico para mini carregadeiras e mini escavadeiras Bobcat e multimarcas.">
+  <meta name="twitter:image" content="assets/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <style>
+    /* ===== VARIÁVEIS ===== */
+    :root {
+      --yellow:       #F5A000;
+      --yellow-light: #FFB830;
+      --yellow-dark:  #C98000;
+      --dark:         #111111;
+      --dark-mid:     #1A1A1A;
+      --dark-soft:    #2C2C2C;
+      --gray:         #6B7280;
+      --gray-light:   #E5E7EB;
+      --off-white:    #F8F9FA;
+      --white:        #FFFFFF;
+      --shadow-sm:    0 2px 8px rgba(0,0,0,.10);
+      --shadow-md:    0 4px 20px rgba(0,0,0,.15);
+      --shadow-lg:    0 8px 40px rgba(0,0,0,.22);
+      --transition:   all .3s ease;
+      --radius:       10px;
+      --radius-lg:    18px;
+      --header-h:     80px;
+      --font-h:       'Barlow Condensed', sans-serif;
+      --font-b:       'Barlow', sans-serif;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+    body { font-family: var(--font-b); color: var(--dark); background: var(--white); line-height: 1.7; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    section[id] { scroll-margin-top: var(--header-h); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 96px 0; }
+
+    /* ===== TIPOGRAFIA ===== */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,160,0,.10);
+      color: var(--yellow-dark);
+      border: 1px solid rgba(245,160,0,.28);
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-size: .72rem;
+      font-weight: 700;
+      font-family: var(--font-h);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: 14px;
+    }
+    .tag-light {
+      background: rgba(245,160,0,.12);
+      color: var(--yellow-light);
+      border-color: rgba(245,160,0,.30);
+    }
+
+    .sec-title {
+      font-family: var(--font-h);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.1;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+    .sec-title span { color: var(--yellow); }
+    .sec-title-light { color: var(--white); }
+    .sec-title-light span { color: var(--yellow-light); }
+
+    .sec-sub {
+      font-size: .97rem;
+      color: var(--gray);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+    .sec-sub-light { color: rgba(255,255,255,.60); }
+
+    .divider {
+      width: 48px; height: 4px;
+      background: var(--yellow);
+      border-radius: 2px;
+      margin: 14px 0;
+    }
+    .divider-center { margin: 14px auto; }
+
+    /* ===== ANIMAÇÕES ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-up.vis { opacity: 1; transform: translateY(0); }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-16px); }
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .5; transform: scale(.8); }
+    }
+
+    /* ===== BOTÕES ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      font-family: var(--font-h);
+      font-weight: 700;
+      font-size: .95rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-yellow {
+      background: var(--yellow);
+      color: var(--dark);
+    }
+    .btn-yellow:hover {
+      background: var(--yellow-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(245,160,0,.38);
+    }
+    .btn-outline-white {
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,.45);
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,.18);
+      border-color: rgba(255,255,255,.80);
+      color: var(--white);
+    }
+
+    /* ===== PROGRESS BAR ===== */
+    #progress {
+      position: fixed;
+      top: var(--header-h); left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--yellow-dark), var(--yellow-light));
+      z-index: 1001;
+      pointer-events: none;
+    }
+
+    /* ===== HEADER ===== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      background: rgba(17,17,17,.97);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(245,160,0,.15);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    #header.scrolled {
+      box-shadow: 0 4px 28px rgba(0,0,0,.50);
+      border-bottom-color: rgba(245,160,0,.30);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 24px; height: 100%;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+    }
+    .logo-link {
+      display: flex; align-items: center;
+      flex-shrink: 0; transition: var(--transition);
+    }
+    .logo-link:hover { opacity: .85; }
+    .logo-img { height: 58px; width: auto; object-fit: contain; }
+
+    .nav { display: flex; align-items: center; gap: 2px; }
+    .nav a {
+      padding: 8px 14px;
+      font-family: var(--font-h);
+      font-size: .85rem; font-weight: 700;
+      letter-spacing: .06em; text-transform: uppercase;
+      color: rgba(255,255,255,.68);
+      border-radius: 6px; transition: var(--transition);
+      white-space: nowrap;
+    }
+    .nav a:hover,
+    .nav a.active { color: var(--yellow); background: rgba(245,160,0,.10); }
+    .nav .nav-cta {
+      background: var(--yellow);
+      color: var(--dark) !important;
+      padding: 10px 22px; border-radius: 8px; margin-left: 6px;
+    }
+    .nav .nav-cta:hover {
+      background: var(--yellow-dark);
+      color: var(--white) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(245,160,0,.35);
+    }
+
+    .hamburger {
+      display: none; flex-direction: column;
+      gap: 5px; padding: 8px;
+      background: none; border: none;
+      cursor: pointer; border-radius: 6px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: rgba(255,255,255,.85);
+      border-radius: 2px; transition: var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--header-h); left: 0; right: 0;
+      background: rgba(17,17,17,.99);
+      border-bottom: 2px solid rgba(245,160,0,.22);
+      padding: 12px 16px 20px;
+      z-index: 999;
+      box-shadow: var(--shadow-lg);
+      flex-direction: column; gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 12px 16px;
+      font-family: var(--font-h); font-size: .95rem;
+      font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.72);
+      border-radius: 8px; transition: var(--transition);
+    }
+    .mobile-menu a:hover { background: rgba(245,160,0,.12); color: var(--yellow); }
+
+    /* ===== HERO ===== */
+    #inicio {
+      min-height: 100vh;
+      background:
+        linear-gradient(135deg, rgba(10,10,10,.88) 0%, rgba(17,17,17,.82) 100%),
+        url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1920&q=80') center / cover no-repeat;
+      position: relative;
+      display: flex; align-items: center;
+      overflow: hidden; padding: 0;
+    }
+    #inicio::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(245,160,0,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,160,0,.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+    }
+    #inicio::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 50%, transparent 30%, rgba(10,10,10,.72) 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative; z-index: 2; width: 100%;
+      padding: calc(var(--header-h) + 64px) 0 80px;
+    }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 60px; align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center; gap: 10px;
+      background: rgba(245,160,0,.10);
+      border: 1px solid rgba(245,160,0,.30);
+      border-radius: 4px;
+      padding: 8px 18px; margin-bottom: 24px;
+    }
+    .hero-tag-dot {
+      width: 8px; height: 8px;
+      background: var(--yellow); border-radius: 50%;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    .hero-tag span {
+      font-family: var(--font-h);
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--yellow-light);
+    }
+
+    h1.hero-h1 {
+      font-family: var(--font-h);
+      font-size: clamp(3.8rem, 9vw, 7.5rem);
+      font-weight: 900; color: var(--white);
+      line-height: 1.0; margin-bottom: 14px;
+      letter-spacing: .01em; text-transform: uppercase;
+    }
+    h1.hero-h1 span { color: var(--yellow); }
+
+    h2.hero-h2 {
+      font-size: clamp(.95rem, 2vw, 1.15rem);
+      font-weight: 400;
+      color: rgba(255,255,255,.62);
+      margin-bottom: 38px;
+      max-width: 510px; line-height: 1.75;
+    }
+
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+
+    .hero-specs {
+      display: flex; gap: 32px; flex-wrap: wrap;
+    }
+    .hero-spec {
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,.55);
+      font-size: .82rem; font-family: var(--font-h);
+      font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .hero-spec i { color: var(--yellow); font-size: .95rem; }
+
+    .hero-logo-side {
+      flex-shrink: 0; position: relative;
+    }
+    .hero-logo-side img {
+      width: 320px; height: auto;
+      filter: drop-shadow(0 0 48px rgba(245,160,0,.28));
+      animation: float 6s ease-in-out infinite;
+    }
+    .hero-ring {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      border: 1px solid rgba(245,160,0,.10);
+      pointer-events: none; z-index: -1;
+    }
+    .hero-ring::before {
+      content: '';
+      position: absolute; inset: 35px;
+      border-radius: 50%;
+      border: 1px solid rgba(245,160,0,.06);
+    }
+
+    /* ===== STATS STRIP ===== */
+    .stats-strip {
+      background: var(--yellow);
+      padding: 44px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px; text-align: center;
+    }
+    .stat-item {
+      position: relative; padding: 8px;
+    }
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0; top: 50%; transform: translateY(-50%);
+      height: 48px; width: 1px;
+      background: rgba(17,17,17,.18);
+    }
+    .stat-n {
+      font-family: var(--font-h);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900; color: var(--dark);
+      line-height: 1; margin-bottom: 6px;
+      display: block;
+    }
+    .stat-l {
+      font-family: var(--font-h);
+      font-size: .72rem; font-weight: 700;
+      color: rgba(17,17,17,.60);
+      text-transform: uppercase; letter-spacing: .12em;
+    }
+
+    /* ===== SOBRE ===== */
+    #sobre { background: var(--off-white); }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px; align-items: center;
+    }
+    .sobre-img-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--dark-mid);
+      aspect-ratio: 4/3;
+      display: flex; align-items: center;
+      justify-content: center;
+    }
+    .sobre-img-wrap::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,10,10,0) 50%, rgba(10,10,10,.65) 100%);
+      z-index: 1; pointer-events: none;
+    }
+    .sobre-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      position: relative; z-index: 0;
+    }
+    .sobre-badge {
+      position: absolute;
+      bottom: 20px; left: 20px;
+      background: rgba(17,17,17,.90);
+      backdrop-filter: blur(8px);
+      padding: 12px 18px;
+      border-radius: 10px;
+      border-left: 3px solid var(--yellow);
+      display: flex; align-items: center; gap: 10px;
+      font-size: .82rem;
+      color: rgba(255,255,255,.90);
+      font-weight: 600; font-family: var(--font-h);
+      letter-spacing: .04em; z-index: 2;
+    }
+    .sobre-badge i { color: var(--yellow); }
+
+    .sobre-text p {
+      color: var(--gray);
+      margin-bottom: 18px;
+      font-size: .95rem; line-height: 1.85;
+    }
+    .sobre-checks {
+      margin-top: 28px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .sobre-check {
+      display: flex; align-items: center; gap: 12px;
+      font-size: .9rem; font-weight: 600;
+      font-family: var(--font-h);
+      color: var(--dark-soft);
+      letter-spacing: .03em;
+    }
+    .sobre-check i { color: var(--yellow-dark); font-size: .95rem; flex-shrink: 0; }
+
+    /* ===== MVV ===== */
+    #mvv {
+      background: var(--dark);
+      position: relative; overflow: hidden;
+    }
+    #mvv::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(245,160,0,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,160,0,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .mvv-header { text-align: center; margin-bottom: 56px; }
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .mvv-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(245,160,0,.14);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      position: relative; overflow: hidden;
+      transition: var(--transition);
+    }
+    .mvv-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+      opacity: 0; transition: opacity .3s ease;
+    }
+    .mvv-card:hover {
+      background: rgba(255,255,255,.07);
+      border-color: rgba(245,160,0,.28);
+      transform: translateY(-4px);
+    }
+    .mvv-card:hover::before { opacity: 1; }
+    .mvv-ico {
+      width: 64px; height: 64px;
+      background: rgba(245,160,0,.10);
+      border: 1px solid rgba(245,160,0,.20);
+      border-radius: 12px;
+      display: flex; align-items: center;
+      justify-content: center;
+      font-size: 1.55rem; color: var(--yellow);
+      margin-bottom: 20px;
+    }
+    .mvv-card h3 {
+      font-family: var(--font-h);
+      font-size: 1.5rem; font-weight: 900;
+      color: var(--white); margin-bottom: 14px;
+      text-transform: uppercase; letter-spacing: .06em;
+    }
+    .mvv-card p { font-size: .88rem; color: rgba(255,255,255,.58); line-height: 1.8; }
+    .mvv-list { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+    .mvv-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .88rem; color: rgba(255,255,255,.58); line-height: 1.75; }
+    .mvv-list li i { color: var(--yellow); font-size: .72rem; flex-shrink: 0; margin-top: 5px; }
+    .mvv-list li strong { color: rgba(255,255,255,.85); }
+
+    /* ===== SERVIÇOS ===== */
+    #servicos { background: var(--white); }
+    .sec-header { text-align: center; margin-bottom: 56px; }
+    .sec-header .sec-sub { margin: 0 auto; }
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .serv-card {
+      background: var(--off-white);
+      border: 1px solid var(--gray-light);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      transition: var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .serv-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0; height: 3px;
+      background: var(--yellow);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .3s ease;
+    }
+    .serv-card:hover {
+      border-color: rgba(245,160,0,.35);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+      background: var(--white);
+    }
+    .serv-card:hover::after { transform: scaleX(1); }
+    .serv-ico {
+      width: 60px; height: 60px;
+      background: rgba(245,160,0,.10);
+      border: 1px solid rgba(245,160,0,.20);
+      border-radius: 12px;
+      display: flex; align-items: center;
+      justify-content: center;
+      font-size: 1.45rem; color: var(--yellow-dark);
+      margin-bottom: 20px; transition: var(--transition);
+    }
+    .serv-card:hover .serv-ico {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      color: var(--dark);
+    }
+    .serv-card h3 {
+      font-family: var(--font-h);
+      font-size: 1.2rem; font-weight: 900;
+      color: var(--dark); margin-bottom: 10px;
+      text-transform: uppercase; letter-spacing: .05em;
+    }
+    .serv-card p { font-size: .87rem; color: var(--gray); line-height: 1.75; }
+
+    /* ===== SETORES ===== */
+    #setores {
+      background: var(--dark-mid);
+      position: relative; overflow: hidden;
+    }
+    #setores::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(245,160,0,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,160,0,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .setores-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .setor-item {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(245,160,0,.12);
+      border-radius: var(--radius);
+      padding: 28px 18px; text-align: center;
+      transition: var(--transition);
+    }
+    .setor-item:hover {
+      background: rgba(245,160,0,.08);
+      border-color: rgba(245,160,0,.28);
+      transform: translateY(-3px);
+    }
+    .setor-item i {
+      font-size: 1.8rem; color: var(--yellow);
+      margin-bottom: 14px; display: block;
+    }
+    .setor-item span {
+      font-family: var(--font-h);
+      font-size: .85rem; font-weight: 700;
+      color: rgba(255,255,255,.75);
+      text-transform: uppercase; letter-spacing: .06em;
+      line-height: 1.3;
+    }
+
+    /* ===== CONTATO ===== */
+    #contato { background: var(--off-white); }
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: start;
+    }
+    .c-cards { display: flex; flex-direction: column; gap: 14px; }
+    .c-card {
+      display: flex; align-items: flex-start; gap: 16px;
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .c-card:hover {
+      border-color: rgba(245,160,0,.35);
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+    .c-ico {
+      width: 46px; height: 46px;
+      background: rgba(245,160,0,.10);
+      border-radius: 10px;
+      display: flex; align-items: center;
+      justify-content: center;
+      color: var(--yellow-dark); font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+    .c-label {
+      font-size: .68rem; font-weight: 700;
+      font-family: var(--font-h);
+      text-transform: uppercase; letter-spacing: .12em;
+      color: var(--gray); margin-bottom: 3px;
+    }
+    .c-val {
+      font-size: .92rem; color: var(--dark);
+      font-weight: 600; font-family: var(--font-h);
+      word-break: break-word; overflow-wrap: break-word;
+    }
+    .c-val a { color: var(--yellow-dark); }
+    .c-val a:hover { text-decoration: underline; }
+
+    .cta-box {
+      background: var(--dark);
+      border-radius: var(--radius-lg);
+      padding: 44px 36px; text-align: center;
+      position: relative; overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(245,160,0,.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-box-img {
+      width: 120px; height: auto;
+      margin: 0 auto 24px;
+      filter: drop-shadow(0 4px 16px rgba(245,160,0,.22));
+    }
+    .cta-box h3 {
+      font-family: var(--font-h);
+      font-size: 1.8rem; font-weight: 900;
+      color: var(--white); margin-bottom: 10px;
+      text-transform: uppercase; letter-spacing: .04em;
+    }
+    .cta-divider {
+      width: 40px; height: 3px;
+      background: var(--yellow);
+      border-radius: 2px; margin: 12px auto 18px;
+    }
+    .cta-box p {
+      font-size: .9rem; color: rgba(255,255,255,.58);
+      margin-bottom: 28px; line-height: 1.7;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      padding: 64px 0 28px;
+      border-top: 1px solid rgba(245,160,0,.14);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand .footer-logo {
+      height: 70px; width: auto; margin-bottom: 20px;
+      filter: drop-shadow(0 2px 8px rgba(245,160,0,.14));
+    }
+    .footer-brand p {
+      font-size: .87rem;
+      color: rgba(255,255,255,.45);
+      line-height: 1.8; max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-h);
+      font-size: 1rem; font-weight: 800;
+      color: var(--white);
+      text-transform: uppercase; letter-spacing: .10em;
+      margin-bottom: 18px; padding-bottom: 10px;
+      border-bottom: 1px solid rgba(245,160,0,.16);
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font-size: .86rem;
+      color: rgba(255,255,255,.48);
+      transition: var(--transition);
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-h); letter-spacing: .04em;
+    }
+    .footer-links a:hover { color: var(--yellow); padding-left: 4px; }
+    .footer-links a i { font-size: .72rem; color: var(--yellow); opacity: .65; }
+    .f-ci {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: .84rem; color: rgba(255,255,255,.45);
+      line-height: 1.6; margin-bottom: 10px;
+      font-family: var(--font-h);
+    }
+    .f-ci span { word-break: break-word; overflow-wrap: break-word; }
+    .f-ci i { color: var(--yellow); font-size: .88rem; flex-shrink: 0; margin-top: 2px; }
+    .footer-hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,.07);
+      margin-bottom: 22px;
+    }
+    .footer-bottom {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap; gap: 8px;
+      font-size: .78rem;
+      color: rgba(255,255,255,.28);
+      font-family: var(--font-h);
+    }
+
+    /* ===== WHATSAPP FLUTUANTE ===== */
+    .wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px; z-index: 998;
+    }
+    .wa-float a {
+      display: flex; align-items: center;
+      justify-content: center;
+      width: 58px; height: 58px;
+      background: #25D366; border-radius: 50%;
+      color: var(--white); font-size: 1.65rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,.40);
+      transition: background .25s ease, box-shadow .25s ease, transform .25s ease;
+    }
+    .wa-float a:hover {
+      background: #1ebe5d;
+      box-shadow: 0 6px 28px rgba(37,211,102,.50);
+      transform: scale(1.07);
+    }
+
+    /* ===== EFEITOS ===== */
+
+    /* Divider shimmer animado */
+    .divider {
+      background: linear-gradient(90deg, var(--yellow-dark), var(--yellow-light), var(--yellow-dark));
+      background-size: 300% 100%;
+      animation: shimmer-bar 2.5s linear infinite;
+    }
+    @keyframes shimmer-bar {
+      0%   { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    /* Faíscas no hero */
+    .hero-sparks {
+      position: absolute; inset: 0;
+      overflow: hidden; pointer-events: none; z-index: 1;
+    }
+    .spark {
+      position: absolute; bottom: -10px;
+      border-radius: 50%;
+      background: var(--yellow-light);
+      box-shadow: 0 0 6px 2px rgba(245,160,0,.55);
+      animation: spark-rise linear infinite;
+      opacity: 0;
+    }
+    @keyframes spark-rise {
+      0%   { transform: translateY(0) translateX(0) scale(1);   opacity: 0; }
+      8%   { opacity: 1; }
+      85%  { opacity: .35; }
+      100% { transform: translateY(-110vh) translateX(var(--drift, 50px)) scale(.3); opacity: 0; }
+    }
+
+    /* Underline animado nos títulos */
+    .sec-title span { position: relative; }
+    .sec-title span::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 3px;
+      background: var(--yellow);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .75s cubic-bezier(.22, 1, .36, 1) .25s;
+    }
+    .sec-title.draw-vis span::after { transform: scaleX(1); }
+
+    /* Ícones nos cards de serviço — bounce/rotate no hover */
+    .serv-ico i {
+      display: block;
+      transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
+    }
+    .serv-card:hover .serv-ico i { transform: rotate(-14deg) scale(1.28); }
+
+    /* Ícones nos setores — rotate no hover */
+    .setor-item i {
+      transition: transform .4s cubic-bezier(.34, 1.56, .64, 1), color .3s ease;
+    }
+    .setor-item:hover i { transform: rotate(18deg) scale(1.25); }
+
+    /* Ícone MVV — rotate no hover */
+    .mvv-ico {
+      transition: transform .35s cubic-bezier(.34, 1.56, .64, 1),
+                  background .3s ease, border-color .3s ease;
+    }
+    .mvv-card:hover .mvv-ico {
+      transform: rotate(-12deg) scale(1.1);
+      background: rgba(245,160,0,.20);
+      border-color: rgba(245,160,0,.45);
+    }
+
+    /* Zoom suave na imagem do sobre no hover */
+    .sobre-img-wrap img { transition: transform .65s ease; }
+    .sobre-img-wrap:hover img { transform: scale(1.05); }
+
+    /* Glow pulsante no CTA box */
+    @keyframes cta-glow {
+      0%, 100% { box-shadow: var(--shadow-lg); }
+      50%       { box-shadow: var(--shadow-lg), 0 0 36px rgba(245,160,0,.22); }
+    }
+    .cta-box { animation: cta-glow 3.5s ease-in-out infinite; }
+
+    /* Scale suave nos números das stats no hover */
+    .stat-item { cursor: default; }
+    .stat-item:hover .stat-n { transform: scale(1.08); }
+    .stat-n { transition: transform .25s ease; display: block; }
+
+    /* Tag com entrada animada */
+    @keyframes tag-pop {
+      from { transform: scale(.8); opacity: 0; }
+      to   { transform: scale(1);  opacity: 1; }
+    }
+
+    /* Linha de destaque animada no hero */
+    .hero-h1 span {
+      position: relative; display: inline-block;
+    }
+    .hero-h1 span::after {
+      content: '';
+      position: absolute;
+      bottom: 4px; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--yellow-dark), var(--yellow-light), var(--yellow-dark));
+      background-size: 200% 100%;
+      border-radius: 3px;
+      animation: shimmer-bar 2s linear infinite;
+      opacity: .55;
+      z-index: -1;
+    }
+
+    /* Stagger CSS para grids (reforça o JS) */
+    .servicos-grid .serv-card:nth-child(1).fade-up { transition-delay: .00s; }
+    .servicos-grid .serv-card:nth-child(2).fade-up { transition-delay: .09s; }
+    .servicos-grid .serv-card:nth-child(3).fade-up { transition-delay: .18s; }
+    .servicos-grid .serv-card:nth-child(4).fade-up { transition-delay: .27s; }
+    .servicos-grid .serv-card:nth-child(5).fade-up { transition-delay: .36s; }
+    .servicos-grid .serv-card:nth-child(6).fade-up { transition-delay: .45s; }
+
+    .mvv-grid .mvv-card:nth-child(1).fade-up { transition-delay: .00s; }
+    .mvv-grid .mvv-card:nth-child(2).fade-up { transition-delay: .13s; }
+    .mvv-grid .mvv-card:nth-child(3).fade-up { transition-delay: .26s; }
+
+    .setores-grid .setor-item:nth-child(1).fade-up { transition-delay: .00s; }
+    .setores-grid .setor-item:nth-child(2).fade-up { transition-delay: .07s; }
+    .setores-grid .setor-item:nth-child(3).fade-up { transition-delay: .14s; }
+    .setores-grid .setor-item:nth-child(4).fade-up { transition-delay: .21s; }
+    .setores-grid .setor-item:nth-child(5).fade-up { transition-delay: .28s; }
+    .setores-grid .setor-item:nth-child(6).fade-up { transition-delay: .35s; }
+    .setores-grid .setor-item:nth-child(7).fade-up { transition-delay: .42s; }
+    .setores-grid .setor-item:nth-child(8).fade-up { transition-delay: .49s; }
+
+    /* ===== RESPONSIVE ===== */
+
+    /* Tablet landscape (≤ 1024px) */
+    @media (max-width: 1024px) {
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+      .setores-grid  { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid   { grid-template-columns: 1fr 1fr; gap: 32px 48px; }
+      .footer-brand  { grid-column: 1 / -1; }
+      .footer-brand p { max-width: 100%; }
+    }
+
+    /* Tablet portrait (≤ 900px) */
+    @media (max-width: 900px) {
+      .sobre-grid     { grid-template-columns: 1fr; gap: 36px; }
+      .sobre-img-wrap { order: -1; aspect-ratio: 16/9; }
+      .mvv-grid       { grid-template-columns: 1fr; }
+      .contato-grid   { grid-template-columns: 1fr; gap: 32px; }
+      .hero-layout    { grid-template-columns: 1fr; }
+      .hero-logo-side { display: none; }
+      h2.hero-h2      { max-width: 100%; }
+    }
+
+    /* Tablet / large mobile (≤ 768px) */
+    @media (max-width: 768px) {
+      :root { --header-h: 68px; }
+      section { padding: 64px 0; }
+      .nav { display: none; }
+      .hamburger { display: flex; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2)::after { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-brand { grid-column: auto; }
+      .footer-brand p { max-width: 340px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      footer { padding: 48px 0 24px; }
+      .hero-inner { padding: calc(var(--header-h) + 52px) 0 60px; }
+      .cta-box { padding: 36px 24px; }
+      .sobre-grid { gap: 32px; }
+    }
+
+    /* Medium mobile (≤ 600px) */
+    @media (max-width: 600px) {
+      .servicos-grid { grid-template-columns: 1fr; }
+      .hero-specs { gap: 14px; flex-direction: column; }
+      .hero-spec  { font-size: .78rem; }
+      h2.hero-h2  { font-size: .93rem; margin-bottom: 28px; }
+    }
+
+    /* Standard mobile (≤ 480px) */
+    @media (max-width: 480px) {
+      :root { --header-h: 62px; }
+      section { padding: 52px 0; }
+      .container { padding: 0 18px; }
+      .logo-img { height: 46px; }
+      h1.hero-h1  { font-size: clamp(2.8rem, 11vw, 3.4rem); }
+      .hero-inner { padding: calc(var(--header-h) + 40px) 0 52px; }
+      .hero-btns  { flex-direction: column; align-items: stretch; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+      .hero-tag   { padding: 7px 14px; }
+      .stats-strip { padding: 32px 0; }
+      .stat-n { font-size: 2rem; }
+      .stat-item::after { display: none; }
+      .mvv-grid { max-width: 100%; }
+      .cta-box { padding: 32px 20px; }
+      .cta-box h3 { font-size: 1.6rem; }
+      .cta-box .btn { display: flex; width: 100%; }
+      .wa-float { bottom: 18px; right: 18px; }
+      .wa-float a { width: 52px; height: 52px; font-size: 1.45rem; }
+      .contato-grid { gap: 24px; }
+    }
+
+    /* Small mobile (≤ 380px) */
+    @media (max-width: 380px) {
+      :root { --header-h: 58px; }
+      section { padding: 44px 0; }
+      .container { padding: 0 14px; }
+      .logo-img { height: 38px; }
+      h1.hero-h1  { font-size: 2.4rem; }
+      .hero-inner { padding: calc(var(--header-h) + 28px) 0 40px; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .setores-grid { grid-template-columns: 1fr; }
+      .sec-title  { font-size: clamp(1.6rem, 7.5vw, 2rem); }
+      .cta-box    { padding: 24px 16px; }
+      .cta-box h3 { font-size: 1.35rem; }
+      .serv-card  { padding: 28px 20px; }
+      .mvv-card   { padding: 32px 20px; }
+      .hero-tag span { font-size: .62rem; letter-spacing: .09em; }
+      footer { padding: 40px 0 20px; }
+      .btn { padding: 12px 24px; font-size: .88rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ===== HEADER ===== -->
+<header id="header" role="banner">
+  <div class="header-inner">
+    <a href="#inicio" class="logo-link" aria-label="Arena Tech — Início">
+      <img src="assets/logo.png" alt="Arena Tech Peças e Serviços" class="logo-img">
+    </a>
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#setores">Setores</a>
+      <a href="#contato" class="nav-cta">Contato</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+  <a href="#inicio">Início</a>
+  <a href="#sobre">Sobre nós</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#setores">Setores atendidos</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" aria-label="Início">
+    <div class="hero-sparks" id="hero-sparks" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="container">
+        <div class="hero-layout">
+
+          <div class="fade-up">
+            <div class="hero-tag">
+              <span class="hero-tag-dot"></span>
+              <span>Especialistas em Bobcat &amp; Multimarcas</span>
+            </div>
+
+            <h1 class="hero-h1">Arena<br><span>Tech</span></h1>
+
+            <h2 class="hero-h2">
+              Excelência em peças e serviços para máquinas Bobcat e multimarcas — com compromisso, agilidade e suporte técnico especializado em Lauro de Freitas, BA.
+            </h2>
+
+            <div class="hero-btns">
+              <a href="https://wa.me/5571981554277"
+                 class="btn btn-yellow"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Fale conosco pelo WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                Fale conosco
+              </a>
+              <a href="#servicos"
+                 class="btn btn-outline-white"
+                 aria-label="Ver nossos serviços">
+                <i class="fas fa-tools" aria-hidden="true"></i>
+                Nossos serviços
+              </a>
+            </div>
+
+            <div class="hero-specs">
+              <div class="hero-spec">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <span>Qualidade garantida</span>
+              </div>
+              <div class="hero-spec">
+                <i class="fas fa-bolt" aria-hidden="true"></i>
+                <span>Atendimento ágil</span>
+              </div>
+              <div class="hero-spec">
+                <i class="fas fa-headset" aria-hidden="true"></i>
+                <span>Suporte técnico</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-logo-side fade-up" aria-hidden="true">
+            <div class="hero-ring"></div>
+            <img src="assets/logo.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS STRIP ===== -->
+  <div class="stats-strip" aria-label="Diferenciais da Arena Tech">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-up">
+          <span class="stat-n" data-target="7" data-suffix="+">7+</span>
+          <span class="stat-l">Setores atendidos</span>
+        </div>
+        <div class="stat-item fade-up">
+          <span class="stat-n" data-target="100" data-suffix="%">100%</span>
+          <span class="stat-l">Foco no cliente</span>
+        </div>
+        <div class="stat-item fade-up">
+          <span class="stat-n">Multi</span>
+          <span class="stat-l">Compatibilidade de marcas</span>
+        </div>
+        <div class="stat-item fade-up">
+          <span class="stat-n">BA</span>
+          <span class="stat-l">Lauro de Freitas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" aria-labelledby="sobre-titulo">
+    <div class="container sobre-grid">
+
+      <div class="sobre-img-wrap fade-up">
+        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800&q=85" alt="Painel organizado com ferramentas profissionais de mecânica">
+        <div class="sobre-badge" aria-hidden="true">
+          <i class="fas fa-calendar-check"></i>
+          <div>
+            <div>Fundada em novembro de 2025</div>
+            <div style="font-size:.72rem; color:rgba(255,255,255,.50); font-weight:400;">Lauro de Freitas, Bahia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-text fade-up">
+        <span class="tag"><i class="fas fa-building" aria-hidden="true"></i> Nossa história</span>
+        <h2 class="sec-title" id="sobre-titulo">Especialistas em <span>máquinas compactas</span></h2>
+        <div class="divider" role="presentation"></div>
+
+        <p>
+          A Arena Tech Peças e Serviços Ltda nasceu em novembro de 2025 para atender a crescente demanda do mercado por peças e serviços especializados para mini carregadeiras e mini escavadeiras Bobcat e outras marcas.
+        </p>
+        <p>
+          A empresa surgiu da experiência de profissionais que identificaram a necessidade de um atendimento mais ágil, técnico e confiável no segmento de máquinas compactas — onde muitos clientes enfrentavam dificuldades para encontrar peças de qualidade e suporte especializado com rapidez.
+        </p>
+        <p>
+          Com dedicação, responsabilidade e foco na excelência, a Arena Tech busca construir relações duradouras, tornando-se referência no setor de peças e serviços para máquinas compactas.
+        </p>
+
+        <ul class="sobre-checks" aria-label="Diferenciais da Arena Tech">
+          <li class="sobre-check"><i class="fas fa-check-circle" aria-hidden="true"></i> Peças originais e multimarcas</li>
+          <li class="sobre-check"><i class="fas fa-check-circle" aria-hidden="true"></i> Manutenção preventiva e corretiva</li>
+          <li class="sobre-check"><i class="fas fa-check-circle" aria-hidden="true"></i> Suporte técnico especializado</li>
+          <li class="sobre-check"><i class="fas fa-check-circle" aria-hidden="true"></i> Atendimento ágil e transparente</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== MVV ===== -->
+  <section id="mvv" aria-labelledby="mvv-titulo">
+    <div class="container">
+
+      <div class="mvv-header fade-up">
+        <span class="tag tag-light"><i class="fas fa-gem" aria-hidden="true"></i> Nossa essência</span>
+        <h2 class="sec-title sec-title-light" id="mvv-titulo">Missão, visão e <span>valores</span></h2>
+        <div class="divider divider-center" role="presentation"></div>
+        <p class="sec-sub sec-sub-light" style="margin: 0 auto;">
+          Os princípios que guiam cada serviço prestado e cada peça entregue com qualidade e responsabilidade.
+        </p>
+      </div>
+
+      <div class="mvv-grid">
+
+        <div class="mvv-card fade-up">
+          <div class="mvv-ico" aria-hidden="true"><i class="fas fa-bullseye"></i></div>
+          <h3>Missão</h3>
+          <p>
+            Fornecer peças, manutenção e suporte técnico especializado para mini carregadeiras e mini escavadeiras Bobcat e outras marcas, com compromisso, excelência e transparência, contribuindo para a eficiência das operações de nossos clientes.
+          </p>
+        </div>
+
+        <div class="mvv-card fade-up">
+          <div class="mvv-ico" aria-hidden="true"><i class="fas fa-eye"></i></div>
+          <h3>Visão</h3>
+          <p>
+            Ser referência no mercado de peças e serviços para mini carregadeiras e mini escavadeiras, reconhecida pela qualidade, confiança e agilidade no atendimento, garantindo máximo desempenho e produtividade aos clientes.
+          </p>
+        </div>
+
+        <div class="mvv-card fade-up">
+          <div class="mvv-ico" aria-hidden="true"><i class="fas fa-heart"></i></div>
+          <h3>Valores</h3>
+          <ul class="mvv-list" aria-label="Nossos valores">
+            <li><i class="fas fa-circle" aria-hidden="true"></i><span><strong>Compromisso</strong> — atendimento ágil e focado em soluções.</span></li>
+            <li><i class="fas fa-circle" aria-hidden="true"></i><span><strong>Qualidade</strong> — peças e serviços com segurança e desempenho.</span></li>
+            <li><i class="fas fa-circle" aria-hidden="true"></i><span><strong>Ética</strong> — relações sólidas baseadas em honestidade.</span></li>
+            <li><i class="fas fa-circle" aria-hidden="true"></i><span><strong>Excelência técnica</strong> — aprimoramento profissional contínuo.</span></li>
+            <li><i class="fas fa-circle" aria-hidden="true"></i><span><strong>Parceria</strong> — relacionamentos duradouros com clientes.</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section id="servicos" aria-labelledby="servicos-titulo">
+    <div class="container">
+
+      <div class="sec-header fade-up">
+        <span class="tag"><i class="fas fa-tools" aria-hidden="true"></i> O que fazemos</span>
+        <h2 class="sec-title" id="servicos-titulo">Nossos <span>serviços</span></h2>
+        <div class="divider divider-center" role="presentation"></div>
+        <p class="sec-sub">
+          Soluções completas para manter suas máquinas compactas operando com máximo desempenho e produtividade.
+        </p>
+      </div>
+
+      <div class="servicos-grid">
+
+        <div class="serv-card fade-up">
+          <div class="serv-ico" aria-hidden="true"><i class="fas fa-cogs"></i></div>
+          <h3>Venda de peças</h3>
+          <p>Fornecimento de peças originais e multimarcas para mini carregadeiras e mini escavadeiras Bobcat, com qualidade garantida e compatibilidade assegurada.</p>
+        </div>
+
+        <div class="serv-card fade-up">
+          <div class="serv-ico" aria-hidden="true"><i class="fas fa-wrench"></i></div>
+          <h3>Manutenção preventiva</h3>
+          <p>Revisões periódicas para prolongar a vida útil dos equipamentos, evitar falhas inesperadas e manter a produtividade das operações no máximo rendimento.</p>
+        </div>
+
+        <div class="serv-card fade-up">
+          <div class="serv-ico" aria-hidden="true"><i class="fas fa-tools"></i></div>
+          <h3>Manutenção corretiva</h3>
+          <p>Diagnóstico preciso e reparo eficiente de falhas e avarias, restabelecendo o funcionamento pleno das máquinas com agilidade e técnica especializada.</p>
+        </div>
+
+        <div class="serv-card fade-up">
+          <div class="serv-ico" aria-hidden="true"><i class="fas fa-search"></i></div>
+          <h3>Diagnóstico técnico</h3>
+          <p>Análise completa dos equipamentos para identificar problemas com precisão, evitando gastos desnecessários com peças e serviços desnecessários.</p>
+        </div>
+
+        <div class="serv-card fade-up">
+          <div class="serv-ico" aria-hidden="true"><i class="fas fa-headset"></i></div>
+          <h3>Suporte técnico</h3>
+          <p>Orientação especializada para operadores e gestores de frotas, auxiliando nas melhores práticas de uso e conservação dos equipamentos compactos.</p>
+        </div>
+
+        <div class="serv-card fade-up">
+          <div class="serv-ico" aria-hidden="true"><i class="fas fa-truck"></i></div>
+          <h3>Atendimento multimarcas</h3>
+          <p>Serviços e peças compatíveis com diversas marcas de máquinas compactas além da Bobcat, oferecendo soluções abrangentes para frotas mistas.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SETORES ===== -->
+  <section id="setores" aria-labelledby="setores-titulo">
+    <div class="container">
+
+      <div class="sec-header fade-up">
+        <span class="tag tag-light"><i class="fas fa-industry" aria-hidden="true"></i> Mercado de atuação</span>
+        <h2 class="sec-title sec-title-light" id="setores-titulo">Setores <span>atendidos</span></h2>
+        <div class="divider divider-center" role="presentation"></div>
+        <p class="sec-sub sec-sub-light" style="margin: 0 auto;">
+          Atendemos profissionais de diferentes segmentos que dependem de máquinas compactas de alta performance.
+        </p>
+      </div>
+
+      <div class="setores-grid">
+        <div class="setor-item fade-up">
+          <i class="fas fa-hard-hat" aria-hidden="true"></i>
+          <span>Construção civil</span>
+        </div>
+        <div class="setor-item fade-up">
+          <i class="fas fa-mountain" aria-hidden="true"></i>
+          <span>Terraplenagem</span>
+        </div>
+        <div class="setor-item fade-up">
+          <i class="fas fa-tractor" aria-hidden="true"></i>
+          <span>Locação de máquinas</span>
+        </div>
+        <div class="setor-item fade-up">
+          <i class="fas fa-leaf" aria-hidden="true"></i>
+          <span>Agricultura e serviços rurais</span>
+        </div>
+        <div class="setor-item fade-up">
+          <i class="fas fa-road" aria-hidden="true"></i>
+          <span>Infraestrutura e obras</span>
+        </div>
+        <div class="setor-item fade-up">
+          <i class="fas fa-industry" aria-hidden="true"></i>
+          <span>Manutenção industrial</span>
+        </div>
+        <div class="setor-item fade-up">
+          <i class="fas fa-tree" aria-hidden="true"></i>
+          <span>Paisagismo e serviços urbanos</span>
+        </div>
+        <div class="setor-item fade-up">
+          <i class="fas fa-plus-circle" aria-hidden="true"></i>
+          <span>E muito mais</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" aria-labelledby="contato-titulo">
+    <div class="container">
+
+      <div class="sec-header fade-up">
+        <span class="tag"><i class="fas fa-phone" aria-hidden="true"></i> Entre em contato</span>
+        <h2 class="sec-title" id="contato-titulo">Fale com a <span>Arena Tech</span></h2>
+        <div class="divider divider-center" role="presentation"></div>
+        <p class="sec-sub">
+          Estamos prontos para atender sua demanda com agilidade e expertise. Entre em contato agora mesmo.
+        </p>
+      </div>
+
+      <div class="contato-grid">
+
+        <div class="c-cards fade-up">
+
+          <div class="c-card">
+            <div class="c-ico" aria-hidden="true"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <div class="c-label">Endereço</div>
+              <div class="c-val">Rua Floresta Azul, 326 — Vida Nova<br>Lauro de Freitas, BA — CEP: 42.717-815</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5571981554277"
+             class="c-card"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Enviar mensagem pelo WhatsApp">
+            <div class="c-ico" aria-hidden="true"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+            <div>
+              <div class="c-label">WhatsApp</div>
+              <div class="c-val">(71) 98155-4277</div>
+            </div>
+          </a>
+
+          <a href="mailto:luis.santos@arenatechs.com.br"
+             class="c-card"
+             aria-label="Enviar e-mail para a Arena Tech">
+            <div class="c-ico" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="c-label">E-mail</div>
+              <div class="c-val">luis.santos@arenatechs.com.br</div>
+            </div>
+          </a>
+
+          <div class="c-card">
+            <div class="c-ico" aria-hidden="true"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="c-label">Horário de atendimento</div>
+              <div class="c-val">Seg–Sex: 8h às 18h &nbsp;|&nbsp; Sáb: 8h às 12h</div>
+            </div>
+          </div>
+
+          <div class="c-card">
+            <div class="c-ico" aria-hidden="true"><i class="fas fa-file-invoice"></i></div>
+            <div>
+              <div class="c-label">CNPJ</div>
+              <div class="c-val">63.831.367/0001-77</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cta-box fade-up">
+          <img src="assets/logo.png" alt="Arena Tech" class="cta-box-img">
+          <h3>Precisa de peças<br>ou serviços?</h3>
+          <div class="cta-divider"></div>
+          <p>
+            Nossa equipe técnica está pronta para atender sua demanda com agilidade. Solicite um orçamento agora mesmo pelo WhatsApp.
+          </p>
+          <a href="https://wa.me/5571981554277"
+             class="btn btn-yellow"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Solicitar orçamento pelo WhatsApp"
+             style="margin: 0 auto;">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            Solicitar orçamento
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer role="contentinfo">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Arena Tech Peças e Serviços" class="footer-logo">
+        <p>Especialistas em peças e serviços para mini carregadeiras e mini escavadeiras Bobcat e multimarcas. Qualidade, agilidade e suporte técnico em Lauro de Freitas, BA.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <nav class="footer-links" aria-label="Links do rodapé">
+          <a href="#inicio"><i class="fas fa-chevron-right" aria-hidden="true"></i> Início</a>
+          <a href="#sobre"><i class="fas fa-chevron-right" aria-hidden="true"></i> Sobre nós</a>
+          <a href="#servicos"><i class="fas fa-chevron-right" aria-hidden="true"></i> Serviços</a>
+          <a href="#setores"><i class="fas fa-chevron-right" aria-hidden="true"></i> Setores atendidos</a>
+          <a href="#contato"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contato</a>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <h4>Informações</h4>
+        <div class="f-ci">
+          <i class="fas fa-location-dot" aria-hidden="true"></i>
+          <span>Rua Floresta Azul, 326, Vida Nova<br>Lauro de Freitas, BA — CEP: 42.717-815</span>
+        </div>
+        <div class="f-ci">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span>(71) 98155-4277</span>
+        </div>
+        <div class="f-ci">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>luis.santos@arenatechs.com.br</span>
+        </div>
+        <div class="f-ci">
+          <i class="fas fa-clock" aria-hidden="true"></i>
+          <span>Seg–Sex: 8h–18h &nbsp;|&nbsp; Sáb: 8h–12h</span>
+        </div>
+        <div class="f-ci">
+          <i class="fas fa-file-invoice" aria-hidden="true"></i>
+          <span>CNPJ: 63.831.367/0001-77</span>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-hr">
+
+    <div class="footer-bottom">
+      <p>© 2025 Arena Tech Peças e Serviços Ltda. Todos os direitos reservados.</p>
+      <p>Lauro de Freitas, Bahia</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FLUTUANTE ===== -->
+<div class="wa-float" role="complementary" aria-label="Contato pelo WhatsApp">
+  <a href="https://wa.me/5571981554277"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Fale conosco pelo WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+</div>
+
+<div id="root"></div>
+<!-- Rodapé MonteSite - Atualização Automática -->
+<div id="montesite-footer-badge"></div>
+<script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+
+<script>
+  /* ── Header scroll ── */
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* ── Progress bar ── */
+  const prog = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    prog.style.width = pct + '%';
+  }, { passive: true });
+
+  /* ── Hamburger ── */
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobile-menu');
+  ham.addEventListener('click', () => {
+    const open = mob.classList.toggle('open');
+    ham.classList.toggle('open', open);
+    ham.setAttribute('aria-expanded', String(open));
+  });
+  mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mob.classList.remove('open');
+    ham.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+  }));
+
+  /* ── Active nav on scroll ── */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav a');
+  const navObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => navObs.observe(s));
+
+  /* ── Fade up com stagger ── */
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const fadeObs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => {
+          e.target.classList.add('vis');
+          fadeObs.unobserve(e.target);
+        }, (i % 5) * 70);
+      }
+    });
+  }, { threshold: 0.06 });
+  fadeEls.forEach(el => fadeObs.observe(el));
+
+  /* ── Faíscas industriais no hero ── */
+  (function createSparks() {
+    const container = document.getElementById('hero-sparks');
+    if (!container) return;
+    for (let i = 0; i < 32; i++) {
+      const s = document.createElement('div');
+      s.className = 'spark';
+      const size  = Math.random() * 5 + 2;
+      const left  = Math.random() * 100;
+      const dur   = Math.random() * 9 + 5;
+      const delay = Math.random() * 14;
+      const drift = (Math.random() - 0.5) * 130;
+      s.style.cssText =
+        `width:${size}px;height:${size}px;left:${left}%;` +
+        `animation-duration:${dur}s;animation-delay:-${delay}s;--drift:${drift}px;`;
+      container.appendChild(s);
+    }
+  })();
+
+  /* ── Contador animado nas estatísticas ── */
+  function countUp(el) {
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1600, t0 = performance.now();
+    (function tick(now) {
+      const p    = Math.min((now - t0) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(ease * target) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+  const statObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.target.dataset.target) {
+        countUp(e.target);
+        statObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: .7 });
+  document.querySelectorAll('.stat-n[data-target]').forEach(el => statObs.observe(el));
+
+  /* ── Underline animado nos títulos de seção ── */
+  const titleObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('draw-vis');
+        titleObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: .35 });
+  document.querySelectorAll('.sec-title').forEach(el => titleObs.observe(el));
+
+  /* ── Tilt 3D nos cards de serviço ── */
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.serv-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width  - .5) * 12;
+        const y = ((e.clientY - r.top)  / r.height - .5) * 12;
+        card.style.transform  = `perspective(700px) rotateX(${-y}deg) rotateY(${x}deg) translateY(-4px)`;
+        card.style.transition = 'transform .07s ease';
+        card.style.zIndex     = '2';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform  = '';
+        card.style.transition = 'transform .45s ease';
+        card.style.zIndex     = '';
+      });
+    });
+
+    /* ── Tilt sutil nos cards MVV ── */
+    document.querySelectorAll('.mvv-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width  - .5) * 8;
+        const y = ((e.clientY - r.top)  / r.height - .5) * 8;
+        card.style.transform  = `perspective(800px) rotateX(${-y}deg) rotateY(${x}deg) translateY(-4px)`;
+        card.style.transition = 'transform .07s ease';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform  = '';
+        card.style.transition = 'transform .45s ease';
+      });
+    });
+  }
+
+  /* ── Parallax suave no fundo hero ── */
+  const heroSection = document.getElementById('inicio');
+  window.addEventListener('scroll', () => {
+    if (!heroSection) return;
+    const offset = window.scrollY * 0.3;
+    heroSection.style.backgroundPositionY = `calc(center + ${offset}px)`;
+  }, { passive: true });
+</script>
+
+</body>
+</html>
